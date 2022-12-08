@@ -10,6 +10,15 @@
     <link rel="shortcut icon" href="img/index-32x32.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>FASTFOOD | Degusta con un clik</title>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+        <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+            appId: "d692db7a-7f5c-4043-b6be-913fb66900f3",
+            });
+        });
+        </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F27649;">
@@ -35,6 +44,7 @@
             <div class="row text-center ">
                 <div class="cool">
                   <a id="instalar" class="btn btn-primary" href="#">Instalar Aplicacion</a>
+                  <a id="instalarNotificaciones" class="btn btn-primary" href="#">Activar para recibir notificaciones</a>
                 </div>
             </div>
           </ul>
@@ -162,7 +172,7 @@
 <script src="app.js"></script>
 <script src="js/bootstrap.js" crossorigin="anonymous"></script>
 <script>
-      let eventoPrompt;
+    let eventoPrompt;
   window.addEventListener('beforeinstallprompt', function (e){
     e.preventDefault();
     eventoPrompt= e;
@@ -182,6 +192,29 @@
     });
   });
 
+
+
+    let botonNotificaciones = document.getElementById("instalarNotificaciones");
+  botonNotificaciones.addEventListener('click', function(e){
+    Notification.requestPermission().then(function(result){
+      if(result==='granted'){
+        randomNotificacion();
+      }
+    });
+  });
+
+  function randomNotificacion(){
+    let nTitle="Nueva comida";
+    let nbody="Se añadio una nueva receta";
+    let nImage="img/offline.png";
+    let options={
+      body:nbody,
+      icon:nImage
+    }
+    let notif= new Notification (nTitle,options);
+    setTimeout(randomNotificacion,10000)
+  }
+  
 </script>
 </body>
 </html>

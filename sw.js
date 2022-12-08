@@ -4,13 +4,14 @@ importScripts(
 
 workbox.precaching.precacheAndRoute([
   'index.html',
-  'offline.html',
   'bebidas.html',
   'pedidos.html',
   'postres.html',
-  'img/offline.png',
+  'app.js',
+  'sw.js',
+  'manifest.webmanifest',
   'css/bootstrap.min.css',
-  'js/bootstrap.min.js'
+  'js/bootstrap.min.js',
 ]);
 
 workbox.routing.registerRoute(

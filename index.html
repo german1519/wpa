@@ -44,7 +44,6 @@
             <div class="row text-center ">
                 <div class="cool">
                   <a id="instalar" class="btn btn-primary" href="#">Instalar Aplicacion</a>
-                  <a id="instalarNotificaciones" class="btn btn-primary" href="#">Activar para recibir notificaciones</a>
                 </div>
             </div>
           </ul>
@@ -193,28 +192,6 @@
   });
 
 
-
-    let botonNotificaciones = document.getElementById("instalarNotificaciones");
-  botonNotificaciones.addEventListener('click', function(e){
-    Notification.requestPermission().then(function(result){
-      if(result==='granted'){
-        randomNotificacion();
-      }
-    });
-  });
-
-  function randomNotificacion(){
-    let nTitle="Nueva comida";
-    let nbody="Se añadio una nueva receta";
-    let nImage="img/offline.png";
-    let options={
-      body:nbody,
-      icon:nImage
-    }
-    let notif= new Notification (nTitle,options);
-    setTimeout(randomNotificacion,10000)
-  }
-  
 </script>
 </body>
 </html>

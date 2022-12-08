@@ -9,6 +9,8 @@ workbox.precaching.precacheAndRoute([
   'pedidos.html',
   'postres.html',
   'img/offline.png',
+  'css/bootstrap.min.css',
+  'js/bootstrap.min.js'
 ]);
 
 workbox.routing.registerRoute(

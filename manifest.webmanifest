@@ -1,0 +1,51 @@
+{
+    "name": "FASTFOOD",
+    "shprt_name": "AppAPW",
+    "descripcion": "Mi primera aplicacion web progresiva",
+    "icons": [
+        {
+            "src": "img/index-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-64x64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-168x168.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "img/index-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/fastfod/index.html",
+    "display": "fullscreen",
+    "theme_color": "#0000aa",
+    "background_color": "#0000aa"
+}

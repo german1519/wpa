@@ -3,6 +3,8 @@ importScripts(
 );
 
 workbox.precaching.precacheAndRoute([
+  'offline.html',
+  'img/offline.png',
   'index.html',
   'bebidas.html',
   'pedidos.html',
